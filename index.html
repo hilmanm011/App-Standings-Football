@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#394867"/>
+    <title>Football Pocket</title>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/materialize.min.css">
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+    <body>
+
+        <!-- Navigasi -->
+        <nav class="blue-grey" role="navigation">
+            <div class="nav-wrapper container">
+            <a href="#" class="brand-logo" id="logo-container">Football</a>
+            <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+            <ul class="topnav right hide-on-med-and-down"></ul>
+            <ul class="sidenav" id="nav-mobile"></ul>
+            </div>
+        </nav>
+        <!-- Akhir Navigasi -->
+
+        <!-- Content -->
+        <div class="container" id="body-content"></div>
+        <!-- Akhir Content -->
+        
+        </footer>
+        <footer class="page-footer">
+            <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                <h5 class="white-text">Football</h5>
+                <p class="grey-text text-lighten-4">Football Data Standings.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Sources</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="https://www.football-data.org/documentation/api" target="blank">https://www.football-data.org/documentation/api</a></li>
+                </div>
+            </div>
+            </div>
+            <div class="footer-copyright">
+            <div class="container">
+                &copy; 2020 Muhamad Hilman
+            <a class="grey-text text-lighten-4 right" href="https://goo.gl/maps/8i818paDrSzshMTp9" target="blank">
+                <span class="material-icons">
+                    location_on
+                </span>
+            </a>
+            </div>
+            </div>
+        </footer>
+        <!-- Akhir Footer -->
+        <script>
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("/service-worker.js")
+                        .then(function () {
+                            console.log("Pendaftaran ServiceWorker berhasil");
+                        })
+                        .catch(function () {
+                            console.log("Pendaftaran ServiceWorker gagal");
+                        });
+                });
+            } else {
+                console.log("ServiceWorker belum didukung browser ini.");
+            }
+        </script>
+        
+        <script src="assets/js/materialize.min.js"></script>
+        <script src="assets/js/idb.js"></script>
+        <script src="assets/js/main.js" type="module"></script>
+    </body>
+</html>
