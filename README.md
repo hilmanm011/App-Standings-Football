@@ -1,22 +1,15 @@
-## 🚀 Football-PWA
+## App Football Standing Progresive Web App
 
 > Aplikasi Informasi Sepak Bola Sederhana dengan memanfaatkan API dari football-data.org.
 
-## Deploy
+## Kriteria
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/364ae141-ed80-447e-ad11-b3b8d7227d30/deploy-status)](https://app.netlify.com/sites/football-pwa/deploys)
-
-## Features
-
-- [x] Page Football Standings
-- [x] Page Football Teams
-- [x] Page Bookmark Teams
-- [x] IndexedDB (Create Bookmark, Remove Bookmark)
-- [x] Push Notification (From SW and Server)
-- [x] PWA Module - Cache
-- [x] PWA Module - Add To Home Scren/Standalone Apps
-- [x] PWA Module - Available to Offline
-- [x] PWA Module - Splash Screen
+- [x] Menampilkan minimal 2 halaman yang mengonsumsi data dari website football-data.org.
+- [x] Tetap bisa dipakai meskipun status sedang offline (menerapkan cache).
+- [x] Memiliki fitur penyimpanan data dengan indexed db (bisa menambahkan, menampilkan, dan menghapus tim favorit, jadwal nonton, dsb.) dengan satu halaman khusus untuk menampilkan data yang disimpan (sehingga total halaman menjadi minimal 3 halaman).
+- [x] Dapat menampilkan pesan push dari server (untuk simulasi pesan push dikirim menggunakan Firebase Cloud Messaging) dengan menggunakan payload.
+- [x] Dapat ditambahkan ke homescreen.
+- [x] Memiliki splash screen.
 
 ---
 
