@@ -14,7 +14,10 @@ vapidKeys.privateKey
 
 var pushSubscription = {
     "endpoint": "https://fcm.googleapis.com/fcm/send/cSVY5Wbb2Gw:APA91bFfn_Ux8CK77xZd0hu8MMp73j214WohEJ2-ww6PDXwMcsu49DxR-bRJxYlXSJCt3Xis7RmKa0Sufc_l3SBoRJxqPutpkTWlfNTlnZnhvj520ul5Jn_nWRHRx2cNFdZFpWFz7vAv",
-    "keys": "AAAAfAqKVnc:APA91bEM_RhtWo5Cfv7XziNj6nQsOg-_IUfyGVIwDnmN9zdhvxgG5vUlY0UBGE2_ysDJTTi9GvWb7cSBAElLIzSV45fzlMCJ0EmrUENlbwSvP7cbaBwbEg3rUCbbFQzyW_d1pPe0myVl"
+    "keys": {
+        "p256dh": "AAAAfAqKVnc:APA91bEM_RhtWo5Cfv7XziNj6nQsOg-_IUfyGVIwDnmN9zdhvxgG5vUlY0UBGE2_ysDJTTi9GvWb7cSBAElLIzSV45fzlMCJ0EmrUENlbwSvP7cbaBwbEg3rUCbbFQzyW_d1pPe0myVl",
+        "auth": "AIzaSyAXB38wnjO5S2hH6X9WmRWh7pQT8zzNnEY"
+    }
 };
 var payload = 'Selamat! Aplikasi Anda sudah dapat menerima push notifikasi!';
 
