@@ -11,16 +11,17 @@ const getAllTeam = () => {
                 <div class="col s12">
                     <div class="card">
                     <div class="card-content row valign-wrapper">
-                        <div class="col s4" class="logo-team">
+                        <div class="col s6" class="logo-team">
                             <img src="${team.logo}" alt="${team.name}" class="responsive-img center-align" width="50%" >
                         </div>
                         <div class="col s8 information-team">
                         <span class="badge-blue"><strong>${team.name}</strong></span>
-                        <span>${team.venue}</span>
+                        <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
+                        <span><p class="p-bold">Address:</p> ${team.address}</span>
+                        <a href="${team.website}" target="blank">${team.website}</a>
                         </div>
                     </div>
                     <div class="card-action right-align">
-                        <a href="${team.website}" target="_blank" class="website-action">${team.address}</a>
                         <button onclick="deleteFavoriteTeam(${team.id},'${team.name}')" class="waves-effect waves-light btn red darken-2">Remove</button>
                     </div>
                     </div>
@@ -46,9 +47,9 @@ const pushNotification = msg => {
     }
 }
 
-const addFavoriteTeam = (id,logo,name,venue,website) => {
+const addFavoriteTeam = (id,logo,name,venue,address,website) => {
     //Add To Database
-    database.addTeam({id,logo,name,venue,website})
+    database.addTeam({id,logo,name,venue,address,website})
     //Display Toast
     M.toast({html: `${name} Saved to Favorite!`});
     //Push Notification

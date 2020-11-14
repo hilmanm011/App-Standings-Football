@@ -1,4 +1,4 @@
-const CACHE_NAME = "football-standing";
+const CACHE_NAME = "Football-App-PWA";
 
 const urlsToCache = [
     '/',

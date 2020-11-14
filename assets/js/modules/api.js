@@ -103,17 +103,18 @@ const getTeams = leagueID => {
                                 <div class="col s12">
                                     <div class="card">
                                     <div class="card-content row valign-wrapper">
-                                        <div class="col s4" class="logo-team">
+                                        <div class="col s6" class="logo-team">
                                             <img src="${urlTeamImage}" alt="${team.name}" class="responsive-img center-align" width="50%" >
                                         </div>
                                         <div class="col s8 information-team">
                                         <span class="badge-blue"><strong>${team.name}</strong></span>
-                                        <span>${team.venue}</span>
+                                        <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
+                                        <span><p class="p-bold">Address:</p> ${team.address}</span>
+                                        <a href="${team.website}" target="blank">${team.website}</a>
                                         </div>
                                     </div>
                                     <div class="card-action right-align">
-                                        <a href="${team.website}" target="_blank" class="website-action">${team.address}</a>
-                                        <button onclick="addFavoriteTeam(${team.id},'${urlTeamImage}','${team.name}','${team.venue}','${team.website}')" class="waves-effect waves-light btn cyan darken-1">Save Team
+                                        <button onclick="addFavoriteTeam(${team.id},'${urlTeamImage}','${team.name}','${team.venue}','${team.address}','${team.website}')" class="waves-effect waves-light btn cyan darken-1">Save Team
                                         </button>
                                     </div>
                                     </div>
@@ -145,17 +146,18 @@ const getTeams = leagueID => {
             <div class="col s12">
                 <div class="card">
                 <div class="card-content row valign-wrapper">
-                    <div class="col s4" class="logo-team">
+                    <div class="col s6" class="logo-team">
                         <img src="${urlTeamImage}" alt="${team.name}" class="responsive-img center-align" width="50%" >
                     </div>
                     <div class="col s8 information-team">
                     <span class="badge-blue"><strong>${team.name}</strong></span>
-                    <span>${team.venue}</span>
+                    <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
+                    <span><p class="p-bold">Address:</p> ${team.address}</span>
+                    <a href="${team.website}" target="blank">${team.website}</a>
                     </div>
                 </div>
                 <div class="card-action right-align">
-                <a href="${team.website}" target="_blank">${team.address}</a>
-                    <button onclick="addFavoriteTeam(${team.id},'${urlTeamImage}','${team.name}','${team.venue}','${team.website}')" class="waves-effect waves-light btn cyan darken-1">Save Team
+                    <button onclick="addFavoriteTeam(${team.id},'${urlTeamImage}','${team.name}','${team.venue}','${team.address}','${team.website}')" class="waves-effect waves-light btn cyan darken-1">Save Team
                     </button>
                 </div>
                 </div>

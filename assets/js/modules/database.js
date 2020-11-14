@@ -4,7 +4,7 @@ let dbPromise = idb.open('football', 1, upgradeDB => {
     }
 })
 
-const addTeam = ({id,logo,name,venue,address}) => {
+const addTeam = ({id,logo,name,venue,address,website}) => {
     dbPromise
     .then(db => {
         let tx = db.transaction('teams', 'readwrite');
@@ -13,8 +13,9 @@ const addTeam = ({id,logo,name,venue,address}) => {
             id: id,
             logo: logo,
             name: name,
-            address: address,
             venue: venue,
+            address: address,
+            website: website,
             created: new Date().getTime()
         };
         store.put(item, id); //menambahkan key "teams"

@@ -27,9 +27,9 @@ const loadPage = (path = 'home') => {
                 }
                 
             }else if(xhr.status == 404){
-                element.innerHTML = "<h1>Halaman Tidak Ditemukan</h1>"
+                element.innerHTML = "<h1>Page Not Found</h1>"
             }else{
-                element.innerHTML = "<h1>Maaf. halaman tidak dapat di akses!</h1>"
+                element.innerHTML = "<h1>Check your internet connection!</h1>"
             }
         }
     }

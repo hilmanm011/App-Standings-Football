@@ -33,9 +33,9 @@ const notification = () => {
                                 .then(sub => {
                                     console.log('Berhasil Subscribe dengan endpoint', sub.endpoint)
                                     console.log('Berhasil melakukan subscribe dengan p256dh key: ', btoa(String.fromCharCode.apply(null, new Uint8Array(sub.getKey('p256dh')))))
-                                    console.log('Berhasil melakukan subscribe dengan auth key: ', btoa(String.fromCharCode.apply(null, new Uint8Array(sub.getKey('auth')))))
+                                    console.log('Successfully subscribed with auth key: ', btoa(String.fromCharCode.apply(null, new Uint8Array(sub.getKey('auth')))))
                                 })
-                                .catch(err => console.log('Gagal Subscribe : ',err))
+                                .catch(err => console.log('Subscribe Failed : ',err))
                         })
                 }
             })
