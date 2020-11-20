@@ -101,25 +101,37 @@ const getTeams = leagueID => {
                                 urlTeamImage = urlTeamImage.replace(/^http:\/\//i, 'https://')
                                 teamsHTML  +=
                                 `
-                                <div class="col s12">
-                                    <div class="card">
-                                    <div class="card-content row valign-wrapper">
-                                        <div class="col s6" class="logo-team">
-                                            <img src="${urlTeamImage}" alt="${team.name}" class="responsive-img center-align" width="50%" >
+                                <div class="card row">
+                                    <div class="col s12">
+                                        <div class="col s12">
+                                            <div class="card-content  z-depth-3">
+                                                <div class="row s6 center-align" class="logo-team">
+                                                    <img src="${urlTeamImage}" alt="${team.name}" class="responsive-img center-align" width="50%" >
+                                                </div>
+                                                <div class="row s8 information-team">
+                                                    <span class="badge-blue"><strong>${team.name}</strong></span>
+                                                    <span><p class="p-bold">Stadium:</p> ${team.venue}</span><hr>
+                                                    <span><p class="p-bold">Address:</p> ${team.address}</span><hr>
+                                                    <span><p class="p-bold">Website:</p> ${team.website}</span><hr>
+                                                    <span><p class="p-bold">Website:</p><a href="${team.website}" >${team.website}</a></span><hr>
+                                                    <span>
+                                                    <a onclick="addFavoriteTeam(${team.id},
+                                                        '${urlTeamImage}',
+                                                        '${team.name}',
+                                                        '${team.venue}',
+                                                        '${team.address}',
+                                                        '${team.website}'
+                                                        )" class="btn-floating btn-large waves-effect waves-light yellow accent-3 right">
+                                                        <i class="material-icons">add</i>
+                                                        </a>
+                                                    </span>
+                                                    
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col s8 information-team">
-                                        <span class="badge-blue"><strong>${team.name}</strong></span>
-                                        <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
-                                        <span><p class="p-bold">Address:</p> ${team.address}</span>
-                                        <a href="${team.website}" target="blank">${team.website}</a>
-                                        </div>
-                                    </div>
-                                    <div class="card-action right-align">
-                                        <button onclick="addFavoriteTeam(${team.id},'${urlTeamImage}','${team.name}','${team.venue}','${team.address}','${team.website}')" class="waves-effect waves-light btn cyan darken-1">Save Team
-                                        </button>
-                                    </div>
                                     </div>
                                 </div>
+                                
                                 `
                             })
                             document.getElementById('progress').style.display = 'none'
@@ -144,23 +156,32 @@ const getTeams = leagueID => {
             urlTeamImage = urlTeamImage.replace(/^http:\/\//i, 'https://')
             teamsHTML  +=
             `
-            <div class="col s12">
-                <div class="card">
-                <div class="card-content row valign-wrapper">
-                    <div class="col s6" class="logo-team">
-                        <img src="${urlTeamImage}" alt="${team.name}" class="responsive-img center-align" width="50%" >
+            <div class="card row">
+                <div class="col s12">
+                    <div class="col s12">
+                        <div class="card-content">
+                            <div class="row s6 center-align" class="logo-team">
+                                <img src="${urlTeamImage}" alt="${team.name}" class="responsive-img center-align" width="50%" >
+                            </div>
+                            <div class="row s8 information-team">
+                                <span class="badge-blue"><strong>${team.name}</strong></span>
+                                <span><p class="p-bold">Stadium:</p> ${team.venue}</span><hr>
+                                <span><p class="p-bold">Address:</p> ${team.address}</span><hr>
+                                <span><p class="p-bold">Website:</p><a href="${team.website}" >${team.website}</a></span><hr>
+                                <span>
+                                    <a onclick="addFavoriteTeam(${team.id},
+                                        '${urlTeamImage}',
+                                        '${team.name}',
+                                        '${team.venue}',
+                                        '${team.address}',
+                                        '${team.website}'
+                                    )" class="btn-floating btn-large waves-effect waves-light yellow accent-3 right">
+                                    <i class="material-icons">add</i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col s8 information-team">
-                    <span class="badge-blue"><strong>${team.name}</strong></span>
-                    <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
-                    <span><p class="p-bold">Address:</p> ${team.address}</span>
-                    <a href="${team.website}" target="blank">${team.website}</a>
-                    </div>
-                </div>
-                <div class="card-action right-align">
-                    <button onclick="addFavoriteTeam(${team.id},'${urlTeamImage}','${team.name}','${team.venue}','${team.address}','${team.website}')" class="waves-effect waves-light btn cyan darken-1">Save Team
-                    </button>
-                </div>
                 </div>
             </div>
             `

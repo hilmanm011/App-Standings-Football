@@ -8,21 +8,21 @@ const getAllTeam = () => {
             data.forEach(team => {
                 teamsHTML  +=
                 `
-                <div class="col s12">
-                    <div class="card">
-                    <div class="card-content row">
-                        <div class="col s6" class="logo-team">
-                            <img src="${team.logo}" alt="${team.name}" class="responsive-img center-align" width="50%" >
-                        </div>
-                        <div class="col s8 information-team">
-                        <span class="badge-blue"><strong>${team.name}</strong></span>
+                <div class="col s12 m7">
+                    <div class="card horizontal">
+                    <div class="card-image justify-content-center">
+                        <img src="${team.logo}" width="50%">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content">
+                        <h4 class="header"><b>${team.name}</b></h4>
                         <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
                         <span><p class="p-bold">Address:</p> ${team.address}</span>
                         </div>
+                        <div class="card-action">
+                        <a onclick="deleteFavoriteTeam(${team.id},'${team.name}')" class="btn-floating btn-large waves-effect waves-light red darken-2 right">
+                        <i class="material-icons">delete_forever</i></a>
                         </div>
-                        <a href="${team.website}" target="blank">${team.website}</a>
-                    <div class="card-action right-align">
-                        <button onclick="deleteFavoriteTeam(${team.id},'${team.name}')" class="waves-effect waves-light btn red darken-2">Remove</button>
                     </div>
                     </div>
                 </div>
