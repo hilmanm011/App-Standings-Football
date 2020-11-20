@@ -49,6 +49,7 @@ const getStandings = leagueID => {
         
     }
     
+    
     fetch(`${base_url}/v2/competitions/${leagueID}/standings`,{
         headers:{
             'X-Auth-Token' : api_token

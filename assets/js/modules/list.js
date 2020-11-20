@@ -10,7 +10,7 @@ const getAllTeam = () => {
                 `
                 <div class="col s12">
                     <div class="card">
-                    <div class="card-content row valign-wrapper">
+                    <div class="card-content row">
                         <div class="col s6" class="logo-team">
                             <img src="${team.logo}" alt="${team.name}" class="responsive-img center-align" width="50%" >
                         </div>
@@ -18,9 +18,9 @@ const getAllTeam = () => {
                         <span class="badge-blue"><strong>${team.name}</strong></span>
                         <span><p class="p-bold">Stadium:</p> ${team.venue}</span>
                         <span><p class="p-bold">Address:</p> ${team.address}</span>
-                        <a href="${team.website}" target="blank">${team.website}</a>
                         </div>
-                    </div>
+                        </div>
+                        <a href="${team.website}" target="blank">${team.website}</a>
                     <div class="card-action right-align">
                         <button onclick="deleteFavoriteTeam(${team.id},'${team.name}')" class="waves-effect waves-light btn red darken-2">Remove</button>
                     </div>
